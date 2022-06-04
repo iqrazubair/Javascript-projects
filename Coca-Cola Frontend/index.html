@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"> <img src="../CocoCola/images/logo.png" class="logo"> </a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>Taste The Feeling</h2>
+                <p>Coca-Cola® Starlight is here and it's bringing out-of-this-world experiences
+                    to Earth for a limited time only.Experience joy on repeat with our new bottles made of 100% recycled
+                    materials* -
+                    and discover how we’re one step closer to creating a World Without Waste.
+                    *Does not include the bottles’ cap and label.</p>
+                <a href="#">Learn More</a>
+            </div>
+            <div class="imgBox">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <img src="../CocoCola/images/cocacola1.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../CocoCola/images/cocacola2.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../CocoCola/images/cocacola3.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../CocoCola/images/cocacola4.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../CocoCola/images/cocacola5.png" />
+                        </div>
+                        <div class="swiper-slide">
+                            <img src="../CocoCola/images/cocacola6.png" />
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="../CocoCola/images/facebook.png"></a></li>
+            <li><a href="#"><img src="../CocoCola/images/instagram.png"></a></li>
+            <li><a href="#"><img src="../CocoCola/images/twitter.png"></a></li>
+        </ul>
+    </section>
+
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            effect: "coverflow",
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: "auto",
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+            },
+            loop: true,
+        });
+        function toggleMenu() {
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation');
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+
+</html>
